@@ -1,0 +1,32 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Restaurant management dashboard preview</title>
+  <desc id="desc">Operations dashboard mockup with orders, customers, and performance panels.</desc>
+  <rect width="1200" height="750" rx="36" fill="#05070D"/>
+  <rect x="78" y="66" width="1044" height="620" rx="34" fill="#0B1020" stroke="#28334E"/>
+  <rect x="78" y="66" width="218" height="620" rx="34" fill="#0A1424"/>
+  <text x="120" y="128" fill="#FFFFFF" font-family="Inter, Arial" font-size="24" font-weight="800">DineOps</text>
+  <rect x="120" y="178" width="132" height="34" rx="17" fill="#35A7FF" fill-opacity="0.24"/>
+  <rect x="120" y="232" width="104" height="18" rx="9" fill="#64748B" fill-opacity="0.55"/>
+  <rect x="120" y="274" width="126" height="18" rx="9" fill="#64748B" fill-opacity="0.55"/>
+  <text x="346" y="132" fill="#FFFFFF" font-family="Inter, Arial" font-size="36" font-weight="800">Restaurant Dashboard</text>
+  <g>
+    <rect x="346" y="178" width="196" height="118" rx="24" fill="#FFFFFF" fill-opacity="0.08" stroke="#263657"/>
+    <text x="378" y="224" fill="#94A3B8" font-family="Inter, Arial" font-size="14">Open orders</text>
+    <text x="378" y="266" fill="#FFFFFF" font-family="Inter, Arial" font-size="38" font-weight="800">42</text>
+  </g>
+  <g>
+    <rect x="574" y="178" width="196" height="118" rx="24" fill="#FFFFFF" fill-opacity="0.08" stroke="#263657"/>
+    <text x="606" y="224" fill="#94A3B8" font-family="Inter, Arial" font-size="14">Customers</text>
+    <text x="606" y="266" fill="#FFFFFF" font-family="Inter, Arial" font-size="38" font-weight="800">318</text>
+  </g>
+  <g>
+    <rect x="802" y="178" width="236" height="118" rx="24" fill="#FFFFFF" fill-opacity="0.08" stroke="#263657"/>
+    <text x="834" y="224" fill="#94A3B8" font-family="Inter, Arial" font-size="14">Kitchen status</text>
+    <rect x="834" y="248" width="142" height="16" rx="8" fill="#43E8B5"/>
+  </g>
+  <rect x="346" y="336" width="692" height="242" rx="28" fill="#FFFFFF" fill-opacity="0.07" stroke="#263657"/>
+  <text x="382" y="392" fill="#FFFFFF" font-family="Inter, Arial" font-size="22" font-weight="800">Live Orders</text>
+  <rect x="382" y="430" width="600" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.09"/>
+  <rect x="382" y="482" width="538" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.07"/>
+  <rect x="382" y="534" width="570" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.07"/>
+</svg>
