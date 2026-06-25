@@ -268,7 +268,7 @@ export const achievements = [
   { value: 2, suffix: '+', label: 'Years Experience' },
   { value: 10, suffix: '+', label: 'Projects Completed' },
   { value: 1000, suffix: '+', label: 'Hours Development' },
-  { value: 6, suffix: '+', label: 'Production Skills' },
+  { value: 7, suffix: '+', label: 'Production Skills' },
 ];
 
 export const developmentHighlights = [
