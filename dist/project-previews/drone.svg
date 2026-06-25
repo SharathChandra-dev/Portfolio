@@ -1,0 +1,22 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Drone delivery platform preview</title>
+  <desc id="desc">Logistics platform mockup with GPS tracking, route map, QR verification, and payment status.</desc>
+  <rect width="1200" height="750" rx="36" fill="#05070D"/>
+  <rect x="72" y="68" width="1056" height="614" rx="34" fill="#0B1020" stroke="#27324B"/>
+  <text x="118" y="134" fill="#FFFFFF" font-family="Inter, Arial" font-size="36" font-weight="800">Drone Delivery</text>
+  <text x="118" y="172" fill="#94A3B8" font-family="Inter, Arial" font-size="18">GPS tracking, QR verification, and Stripe payments.</text>
+  <rect x="118" y="222" width="608" height="390" rx="30" fill="#06131F" stroke="#284769"/>
+  <path d="M170 526C240 408 350 468 410 350C474 224 584 288 670 248" stroke="#35A7FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="410" cy="350" r="18" fill="#43E8B5"/>
+  <circle cx="670" cy="248" r="18" fill="#9A7CFF"/>
+  <path d="M580 250L632 222L684 250L632 278L580 250Z" fill="#FFFFFF" fill-opacity="0.88"/>
+  <path d="M632 222V278M580 250H684" stroke="#05070D" stroke-width="5" stroke-linecap="round"/>
+  <rect x="772" y="222" width="244" height="170" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#263657"/>
+  <text x="808" y="278" fill="#FFFFFF" font-family="Inter, Arial" font-size="22" font-weight="800">QR Verified</text>
+  <rect x="808" y="312" width="64" height="64" rx="10" fill="#FFFFFF"/>
+  <path d="M820 324H838V342H820V324ZM850 324H862V336H850V324ZM820 354H832V366H820V354ZM844 350H864V370H844V350Z" fill="#05070D"/>
+  <rect x="772" y="436" width="244" height="176" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#263657"/>
+  <text x="808" y="492" fill="#FFFFFF" font-family="Inter, Arial" font-size="22" font-weight="800">Payment</text>
+  <rect x="808" y="526" width="142" height="44" rx="14" fill="#43E8B5"/>
+  <text x="848" y="554" fill="#04120E" font-family="Inter, Arial" font-size="13" font-weight="800">Paid</text>
+</svg>
