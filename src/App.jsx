@@ -5,8 +5,8 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ScrollProgress from './components/ui/ScrollProgress.jsx';
 import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion.js';
+import HomePage from './pages/HomePage.jsx';
 
-const HomePage = lazy(() => import('./pages/HomePage.jsx'));
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage.jsx'));
 
 function ScrollRestoration() {
