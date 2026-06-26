@@ -1,6 +1,6 @@
 import { FiArrowUpRight } from 'react-icons/fi';
 
-export default function ExternalButton({ href, children, variant = 'secondary', download, disabled = false }) {
+export default function ExternalButton({ href, children, variant = 'secondary', download, disabled = false, ...props }) {
   const base =
     'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric';
   const variants = {
@@ -27,6 +27,7 @@ export default function ExternalButton({ href, children, variant = 'secondary', 
       download={download}
       target={href?.startsWith('http') ? '_blank' : undefined}
       rel={href?.startsWith('http') ? 'noreferrer' : undefined}
+      {...props}
     >
       {children}
       {!download && <FiArrowUpRight aria-hidden="true" />}

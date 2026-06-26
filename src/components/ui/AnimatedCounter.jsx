@@ -4,11 +4,10 @@ import { motion, useInView } from 'framer-motion';
 export default function AnimatedCounter({ value, suffix = '', label }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.6 });
+  const isInView = useInView(ref, { once: true, amount: 0.6 });
 
   useEffect(() => {
     if (!isInView) {
-      setCount(0);
       return undefined;
     }
 
@@ -36,8 +35,8 @@ export default function AnimatedCounter({ value, suffix = '', label }) {
       className="glass-card relative overflow-hidden p-6"
       initial={{ opacity: 0, y: 24, scale: 0.94 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, amount: 0.4 }}
-      whileHover={{ y: -8, scale: 1.015, borderColor: 'rgba(53, 167, 255, 0.45)' }}
+      viewport={{ once: true, amount: 0.4 }}
+      whileHover={{ y: -8, rotate: -1, scale: 1.015, borderColor: 'rgba(53, 167, 255, 0.45)' }}
       transition={{ type: 'spring', stiffness: 240, damping: 20 }}
     >
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric to-transparent" />

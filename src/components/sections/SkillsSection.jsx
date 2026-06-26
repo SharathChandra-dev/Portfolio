@@ -21,17 +21,17 @@ export default function SkillsSection() {
         Skills are grouped by the way Sharath ships: polished interfaces, dependable APIs, database-backed workflows, and disciplined testing.
       </SectionHeader>
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-3">
         {skillGroups.map((group, index) => {
           const Icon = icons[group.title] ?? FiCode;
 
           return (
             <motion.article
               key={group.title}
-              className="glass-card p-6"
+              className="glass-card h-full p-6"
               initial={{ opacity: 0, y: 28, rotateX: 7, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-              viewport={{ once: false, amount: 0.28 }}
+              viewport={{ once: true, amount: 0.28 }}
               transition={{ duration: 0.52, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -8, scale: 1.015, borderColor: 'rgba(53, 167, 255, 0.4)' }}
             >
