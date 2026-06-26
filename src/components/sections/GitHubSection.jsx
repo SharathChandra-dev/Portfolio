@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiActivity, FiGitCommit, FiGithub } from 'react-icons/fi';
-import { githubActivity, profile } from '../../data/portfolio.js';
-import ExternalButton from '../ui/ExternalButton.jsx';
+import { FiActivity, FiCode, FiDatabase } from 'react-icons/fi';
+import { githubActivity } from '../../data/portfolio.js';
 import MotionSection from '../ui/MotionSection.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 
@@ -25,7 +24,7 @@ const monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
 
 function ContributionGraph() {
   return (
-    <div className="min-w-0 rounded-3xl border border-white/10 bg-ink/35 p-5">
+    <div className="min-w-0 rounded-[1.5rem] border border-white/10 bg-ink/45 p-5">
       <div className="mb-4 flex items-center justify-between gap-3">
         <p className="flex items-center gap-2 text-sm font-semibold text-white">
           <FiActivity aria-hidden="true" />
@@ -64,10 +63,10 @@ function ContributionGraph() {
                     className={`rounded-[4px] border border-white/5 ${contributionLevels[value]}`}
                     initial={{ opacity: 0, scale: 0.35 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: false, amount: 0.7 }}
+                    viewport={{ once: true, amount: 0.7 }}
                     transition={{
-                      duration: 0.28,
-                      delay: (weekIndex % 10) * 0.018 + dayIndex * 0.012,
+                      duration: 0.22,
+                      delay: (weekIndex % 9) * 0.012 + dayIndex * 0.008,
                       ease: 'easeOut',
                     }}
                   />
@@ -89,86 +88,53 @@ function ContributionGraph() {
   );
 }
 
+function TechnologyCard({ tech, index }) {
+  const Icon = ['MySQL', 'MongoDB'].includes(tech.name) ? FiDatabase : FiCode;
+
+  return (
+    <motion.article
+      className="group min-w-0 rounded-[1.35rem] border border-white/10 bg-white/8 p-4 backdrop-blur-xl"
+      initial={{ opacity: 0, y: index % 2 === 0 ? 28 : -28, rotate: index % 2 === 0 ? -1.5 : 1.5, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.32 }}
+      transition={{ duration: 0.48, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -7, rotate: index % 2 === 0 ? 1.2 : -1.2, borderColor: 'rgba(67, 232, 181, 0.34)' }}
+    >
+      <div className="flex items-center justify-between gap-3">
+        <p className="flex items-center gap-2 font-semibold text-white">
+          <Icon className="size-4 text-electric" aria-hidden="true" />
+          {tech.name}
+        </p>
+        <span className="text-xs font-semibold text-electric">{tech.level}%</span>
+      </div>
+      <p className="mt-3 min-h-12 text-xs leading-5 text-slate-400">{tech.summary}</p>
+      <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+        <motion.div
+          className="h-full rounded-full bg-gradient-to-r from-electric via-pulse to-mint"
+          initial={{ width: 0 }}
+          whileInView={{ width: `${tech.level}%` }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.72, delay: 0.1 + index * 0.05, ease: [0.22, 1, 0.36, 1] }}
+        />
+      </div>
+    </motion.article>
+  );
+}
+
 export default function GitHubSection() {
   return (
-    <MotionSection id="github" className="bg-carbon/60">
-      <SectionHeader eyebrow="Open Source & Development Activity" title="Consistent development patterns across repositories">
-        Repository showcases, recent commit themes, and most-used technologies presented in a recruiter-friendly GitHub view.
+    <MotionSection id="activity" className="bg-carbon/60">
+      <SectionHeader eyebrow="Development Activity" title="Contribution rhythm across frontend and backend tools">
+        Contribution graph plus the stack percentages you wanted recruiters to see without adding a long extra scroll.
       </SectionHeader>
 
-      <div className="grid min-w-0 gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="grid min-w-0 gap-5">
-          <ContributionGraph />
-          <div className="grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {githubActivity.technologies.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                className="min-w-0 rounded-2xl border border-white/10 bg-white/8 p-4"
-                initial={{ opacity: 0, y: 22, scale: 0.96 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.32 }}
-                transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -5, borderColor: 'rgba(53, 167, 255, 0.38)' }}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-semibold text-white">{tech.name}</p>
-                  <span className="text-xs font-semibold text-electric">{tech.level}%</span>
-                </div>
-                <p className="mt-2 min-h-12 break-words text-xs leading-5 text-slate-400">{tech.summary}</p>
-                <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
-                  <motion.div
-                    className="h-full rounded-full bg-gradient-to-r from-electric via-pulse to-mint"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${tech.level}%` }}
-                    viewport={{ once: false, amount: 0.5 }}
-                    transition={{ duration: 0.85, delay: 0.12 + index * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+      <div className="grid min-w-0 gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <ContributionGraph />
 
-        <div className="grid min-w-0 gap-5">
-          <div className="glass-card p-5">
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <h3 className="font-display text-xl font-semibold text-white">Repository Showcase</h3>
-              <ExternalButton href={profile.github} variant="secondary">
-                <FiGithub aria-hidden="true" />
-                GitHub
-              </ExternalButton>
-            </div>
-            <div className="grid gap-3">
-              {githubActivity.repositories.map((repo, index) => (
-                <motion.div
-                  key={repo.name}
-                  className="rounded-2xl border border-white/10 bg-ink/35 p-4"
-                  initial={{ opacity: 0, x: 18 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.35, delay: index * 0.05 }}
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="font-semibold text-white">{repo.name}</p>
-                    <span className="rounded-full bg-electric/12 px-3 py-1 text-xs text-electric">{repo.language}</span>
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{repo.summary}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <div className="glass-card p-5">
-            <h3 className="font-display text-xl font-semibold text-white">Recent Commits</h3>
-            <div className="mt-4 grid gap-3">
-              {githubActivity.commits.map((commit) => (
-                <p key={commit} className="flex gap-3 rounded-2xl border border-white/10 bg-white/8 p-4 text-sm leading-6 text-slate-300">
-                  <FiGitCommit className="mt-1 size-4 flex-none text-mint" aria-hidden="true" />
-                  {commit}
-                </p>
-              ))}
-            </div>
-          </div>
+        <div className="mobile-scroll-row min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {githubActivity.technologies.map((tech, index) => (
+            <TechnologyCard key={tech.name} tech={tech} index={index} />
+          ))}
         </div>
       </div>
     </MotionSection>
