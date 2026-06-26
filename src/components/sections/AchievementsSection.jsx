@@ -22,11 +22,11 @@ export default function AchievementsSection() {
           <motion.span
             key={item}
             className="rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-semibold text-slate-200"
-            initial={{ opacity: 0, y: 14, scale: 0.94 }}
+            initial={{ opacity: 0, y: index % 2 === 0 ? 18 : -18, scale: 0.94 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.4, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -4, borderColor: 'rgba(67, 232, 181, 0.36)' }}
+            whileHover={{ y: -4, rotate: index % 2 === 0 ? -1.5 : 1.5, borderColor: 'rgba(67, 232, 181, 0.36)' }}
           >
             {item}
           </motion.span>

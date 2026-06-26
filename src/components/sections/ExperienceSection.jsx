@@ -20,7 +20,7 @@ export default function ExperienceSection() {
               className="relative grid gap-5 rounded-3xl border border-white/10 bg-white/8 p-5 backdrop-blur-xl md:ml-14 md:grid-cols-[0.82fr_1.18fr] md:p-6"
               initial={{ opacity: 0, x: -34, scale: 0.97 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: false, amount: 0.32 }}
+              viewport={{ once: true, amount: 0.32 }}
               transition={{ duration: 0.56, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ x: 6, borderColor: 'rgba(255, 209, 102, 0.32)' }}
             >

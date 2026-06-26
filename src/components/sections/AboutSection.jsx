@@ -14,13 +14,13 @@ export default function AboutSection() {
           </SectionHeader>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            {highlights.map((item, index) => (
+            {highlights.slice(0, 4).map((item, index) => (
               <motion.div
                 key={item}
                 className="flex gap-3 rounded-2xl border border-white/10 bg-white/8 p-4 text-sm leading-6 text-slate-300"
                 initial={{ opacity: 0, y: 20, scale: 0.96 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.42, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
               >
                 <FiCheckCircle className="mt-1 size-4 flex-none text-mint" aria-hidden="true" />
@@ -35,7 +35,7 @@ export default function AboutSection() {
             className="glass-card overflow-hidden p-6"
             initial={{ opacity: 0, x: 28, rotateY: -5 }}
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-            viewport={{ once: false, amount: 0.32 }}
+            viewport={{ once: true, amount: 0.32 }}
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ type: 'spring', stiffness: 240, damping: 20 }}
           >
@@ -47,6 +47,7 @@ export default function AboutSection() {
                   alt={profile.fullName}
                   className="relative h-full w-full rounded-[1.4rem] object-cover object-[50%_32%] shadow-glow"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>
@@ -77,7 +78,7 @@ export default function AboutSection() {
                 className="glass-card p-5"
                 initial={{ opacity: 0, y: 22, scale: 0.97 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
               >
                 <p className="text-sm font-semibold text-electric">{item.period}</p>
