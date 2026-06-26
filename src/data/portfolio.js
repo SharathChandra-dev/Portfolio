@@ -1,7 +1,7 @@
 export const profile = {
   displayName: 'Sharath Chandra',
   fullName: 'Sharath Chandra Chandrashekhar',
-  title: 'Software Developer | React.js | Full Stack',
+  title: 'Full-Stack Software Developer | React.js | Backend',
   headline: 'Frontend Developer & Full-Stack Engineer',
   location: 'Munich, Germany',
   phone: '+49 155 10323692',
@@ -11,9 +11,9 @@ export const profile = {
   resume: '/Sharath_Chandra_Resume.pdf',
   photo: '/profile/sharath-chandra.jpg',
   tagline:
-    'Building modern, scalable, and user-focused web applications with React and full-stack technologies.',
+    'Building modern, scalable, and user-focused web applications across frontend, backend, APIs, and databases.',
   summary:
-    'M.Sc. Applied Computer Science student at SRH University Munich with 2+ years of professional experience building responsive, scalable web applications. Proven expertise in React.js, API integration, full-stack development, clean UI/UX, and frontend delivery in startup environments.',
+    'M.Sc. Applied Computer Science student at SRH University Munich with 2+ years of professional experience building responsive, scalable web applications. Proven expertise across React.js, API integration, backend workflows, database-backed features, clean UI/UX, and full-stack delivery in startup environments.',
 };
 
 export const navItems = [
@@ -21,14 +21,16 @@ export const navItems = [
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Achievements', href: '#achievements' },
+  { label: 'Activity', href: '#activity' },
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroTech = ['React', 'JavaScript', 'Node.js', 'MongoDB', 'Laravel', 'Git'];
+export const heroTech = ['React', 'Node.js', 'Laravel', 'Java', 'MySQL', 'MongoDB'];
 
 export const highlights = [
-  'Professional frontend development experience',
-  'React.js specialist with reusable component architecture',
+  'Professional full-stack development experience',
+  'Frontend craft with reusable React component architecture',
   'Full-stack background across MERN, Java, Laravel, and MySQL',
   'Team lead experience in startup delivery environments',
   'REST API integration and production bug resolution',
@@ -127,7 +129,7 @@ export const projects = [
     year: '2025',
     preview: '/project-previews/ritzy.svg',
     description:
-      "Modern men's fashion e-commerce platform featuring authentication, shopping cart, checkout flow, API integration, responsive design, and a polished customer experience.",
+      "Men's fashion commerce flow with authentication, cart, checkout, API-ready structure, and a polished responsive customer experience.",
     features: ['Authentication', 'Cart Management', 'Checkout', 'API Integration', 'Product Management'],
     technologies: ['React.js', 'JavaScript', 'REST APIs'],
     challenge: 'Balancing a premium shopping experience with dependable cart state and mobile-first product discovery.',
@@ -156,7 +158,7 @@ export const projects = [
       '/project-screenshots/restaurant-menu-bill.jpg',
     ],
 description:
-  'Restaurant billing and hotel order management website with food cards, quantity controls, bill calculation, table-based ordering, supplier order screen, inventory tracking, urgent item requirements, revenue summary, contact section, and a bold food-focused landing page.',
+  'Restaurant billing and order management interface with menu cards, quantity controls, table-wise bills, supplier needs, inventory views, and revenue summary.',
 
 features: [
   'Menu Browsing',
@@ -213,7 +215,7 @@ repoUrl: '',
       '/project-screenshots/adventure-cards.jpg',
     ],
     description:
-      'Travel and tourism website with an immersive hero, destination cards, tour booking CTAs, search inputs, service blocks, and customer gallery.',
+      'Travel website with an immersive hero, destination cards, tour CTAs, search inputs, service blocks, and a customer gallery.',
     features: ['Tour Cards', 'Booking CTAs', 'Search Inputs', 'Gallery Layout', 'Responsive UI'],
     technologies: ['React.js', 'HTML5', 'CSS3', 'JavaScript'],
     challenge: 'Turning travel inspiration into a clear booking path while preserving speed and responsiveness.',
@@ -244,7 +246,7 @@ repoUrl: '',
       '/project-screenshots/sfwr-user-foods.jpg',
     ],
     description:
-      'Full-stack SRH University project using Laravel and MySQL to manage food inventory, reduce waste, and support real-time tracking.',
+      'Laravel and MySQL sustainability project for food inventory, waste reduction, admin dashboards, and real-time tracking.',
     features: ['Admin Dashboard', 'User Auth', 'Inventory Tracking', 'Food Management', 'Waste Insights'],
     technologies: ['Laravel', 'MySQL', 'JavaScript'],
     challenge: 'Making inventory data actionable enough to reduce waste while keeping administrative workflows simple.',
@@ -272,7 +274,7 @@ export const achievements = [
 ];
 
 export const developmentHighlights = [
-  'React Specialist',
+  'Frontend + Backend Delivery',
   'Full-Stack Development Experience',
   'API Integration',
   'Startup Team Lead',

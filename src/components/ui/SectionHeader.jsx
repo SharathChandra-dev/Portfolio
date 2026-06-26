@@ -6,10 +6,10 @@ export default function SectionHeader({ eyebrow, title, children, align = 'left'
   return (
     <motion.div
       className={centered ? 'mx-auto mb-10 max-w-3xl text-center' : 'mb-10 max-w-3xl'}
-      initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      viewport={{ once: false, amount: 0.45 }}
-      transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.45 }}
+      transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
     >
       {eyebrow && (
         <p className="mb-3 text-sm font-semibold uppercase text-electric">
