@@ -37,7 +37,7 @@ function HeroActions() {
         <FiArrowDown aria-hidden="true" />
         View Projects
       </ExternalButton>
-      <ExternalButton href={profile.resume} download variant="secondary">
+      <ExternalButton href={profile.resume} download={profile.resumeDownloadName} variant="secondary">
         <FiDownload aria-hidden="true" />
         Download Resume
       </ExternalButton>
