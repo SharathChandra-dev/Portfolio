@@ -106,16 +106,29 @@ export default function CaseStudyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: (detailFields.length + 1) * 0.06 }}
               >
-                <h2 className="font-display text-xl font-semibold text-white">Project Screens</h2>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-mint">Visual Evidence</p>
+                    <h2 className="mt-1 font-display text-xl font-semibold text-white">Project Snapshots</h2>
+                  </div>
+                  <p className="max-w-sm text-sm leading-6 text-slate-400">
+                    {project.gallerySummary ?? 'Selected interface screens from the completed project workflow.'}
+                  </p>
+                </div>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   {project.gallery.map((screen, index) => (
-                    <img
-                      key={screen}
-                      src={screen}
-                      alt={`${project.title} screen ${index + 1}`}
-                      className="aspect-[16/10] w-full rounded-2xl border border-white/10 object-cover object-top"
-                      loading="lazy"
-                    />
+                    <figure key={screen} className="overflow-hidden rounded-2xl border border-white/10 bg-ink/35">
+                      <img
+                        src={screen}
+                        alt={`${project.title} ${project.galleryCaptions?.[index] ?? `screen ${index + 1}`}`}
+                        className="aspect-[16/10] w-full bg-ink/60 object-contain object-center transition duration-500 hover:scale-[1.03]"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption className="border-t border-white/10 px-4 py-3 text-sm font-medium text-slate-300">
+                        {project.galleryCaptions?.[index] ?? `Screen ${index + 1}`}
+                      </figcaption>
+                    </figure>
                   ))}
                 </div>
               </motion.section>
