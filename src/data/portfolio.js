@@ -9,6 +9,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/sharath-c1',
   github: 'https://github.com/',
   resume: '/Sharath_Chandra_Resume.pdf',
+  resumeDownloadName: 'Sharath_Chandra_Resume.pdf',
   photo: '/profile/sharath-chandra.jpg',
   tagline:
     'Building modern, scalable, and user-focused web applications across frontend, backend, APIs, and databases.',
@@ -122,6 +123,52 @@ export const skillGroups = [
 ];
 
 export const projects = [
+  {
+    slug: 'iot-face-recognition-surveillance-robot',
+    title: 'IoT Face Recognition Surveillance Robot',
+    category: 'Major Project',
+    year: '2024',
+    preview: '/project-screenshots/iot-robot/prototype.jpeg',
+    gallery: [
+      '/project-screenshots/iot-robot/prototype.jpeg',
+      '/project-screenshots/iot-robot/face-recognition.jpeg',
+      '/project-screenshots/iot-robot/telegram-alerts.jpeg',
+      '/project-screenshots/iot-robot/block-diagram.png',
+    ],
+    galleryCaptions: ['Hardware prototype', 'Face recognition UI', 'Telegram alert flow', 'System architecture'],
+    gallerySummary: 'Real prototype and implementation screens captured from the final major-project submission.',
+    description:
+      'Raspberry Pi based surveillance robot with face recognition, sensor monitoring, wireless movement control, and real-time Telegram alerts.',
+    features: [
+      'Face Recognition',
+      'Raspberry Pi Control',
+      'Telegram Alerts',
+      'Wireless Navigation',
+      'Obstacle Detection',
+      'Gas Detection',
+      'Light Detection',
+      'Metal Detection',
+      'Camera Monitoring',
+      'IoT Integration',
+    ],
+    technologies: ['Python', 'Raspberry Pi', 'OpenCV', 'IoT', 'Telegram Bot', 'Sensors'],
+    challenge:
+      'Combining robotics, computer vision, and sensor alerts into a portable security system that can be controlled remotely and respond in real time.',
+    impact:
+      'Demonstrated a practical major-project prototype for smart surveillance, intruder detection, environmental sensing, and instant user notification.',
+    problem:
+      'Traditional surveillance systems mainly record events after they happen. Homes, restricted areas, labs, and public spaces need a smarter system that can move, detect threats, identify unknown people, and notify users immediately.',
+    approach:
+      'Designed a Raspberry Pi powered four-wheel robot with a camera, wireless control, obstacle sensing, and multiple safety sensors, then connected detections to a Telegram bot for immediate alerts.',
+    implementation:
+      'Implemented Python based robot control, Haar Cascade/OpenCV face recognition, webcam monitoring, ultrasonic obstacle detection, gas, light, and metal sensor checks, plus Telegram notifications containing detected events and captured images.',
+    challenges:
+      'Synchronizing hardware and software reliably, handling low-resolution camera input, keeping movement responsive over Wi-Fi, and reducing false positives across face and sensor detection flows.',
+    results:
+      'Built and tested a working prototype that supports autonomous-style monitoring, manual movement control, unknown-person alerts, sensor-triggered notifications, and real-time image review through Telegram.',
+    demoUrl: '',
+    repoUrl: '',
+  },
   {
     slug: 'ritzy-ecommerce-platform',
     title: 'RITZY E-Commerce Platform',
