@@ -137,13 +137,13 @@ export default function ProjectsSection() {
   return (
     <MotionSection id="projects">
       <SectionHeader eyebrow="Featured Projects" title="A focused project tour without the duplicate scroll">
-        Four selected builds, each kept short on the homepage with deeper case studies one click away.
+        Five selected builds, each kept short on the homepage with deeper case studies one click away.
       </SectionHeader>
 
       <div className="grid gap-6">
         <SpotlightProject />
 
-        <div className="mobile-scroll-row gap-5 lg:grid-cols-3">
+        <div className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-4">
           {supportingProjects.map((project, index) => (
             <CompactProject key={project.slug} project={project} index={index} />
           ))}
@@ -155,7 +155,7 @@ export default function ProjectsSection() {
             What these projects prove
           </p>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-300">
-            React delivery, responsive interfaces, API-connected workflows, practical JavaScript logic, Laravel/MySQL modules, and product thinking across commerce, restaurant, travel, and sustainability use cases.
+            React delivery, responsive interfaces, API-connected workflows, practical JavaScript logic, Laravel/MySQL modules, IoT prototyping, computer-vision alerts, and product thinking across commerce, robotics, restaurant, travel, and sustainability use cases.
           </p>
         </div>
       </div>
