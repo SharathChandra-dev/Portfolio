@@ -57,7 +57,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="mt-5">
-            <ExternalButton href={profile.resume} download variant="secondary">
+            <ExternalButton href={profile.resume} download={profile.resumeDownloadName} variant="secondary">
               <FiDownload aria-hidden="true" />
               Resume Download
             </ExternalButton>
