@@ -47,7 +47,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ExternalButton href={profile.resume} download variant="secondary">
+          <ExternalButton href={profile.resume} download={profile.resumeDownloadName} variant="secondary">
             <FiDownload aria-hidden="true" />
             Resume
           </ExternalButton>
@@ -124,7 +124,7 @@ export default function Header() {
                   visible: { opacity: 1, y: 0, scale: 1 },
                 }}
               >
-                <ExternalButton href={profile.resume} download variant="secondary" onClick={closeMenu}>
+                <ExternalButton href={profile.resume} download={profile.resumeDownloadName} variant="secondary" onClick={closeMenu}>
                   <FiDownload aria-hidden="true" />
                   Download Resume
                 </ExternalButton>
