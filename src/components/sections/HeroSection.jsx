@@ -154,7 +154,7 @@ function DesktopCommandDeck() {
             {mainProject.title}
           </h3>
           <p className="mt-3 text-sm leading-6 text-slate-300">
-            Commerce, cart, checkout, API-ready flow.
+            
           </p>
         </div>
       </div>
