@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiLayers, FiMonitor } from 'react-icons/fi';
 import { projects } from '../../data/portfolio.js';
+import HorizontalScroller from '../ui/HorizontalScroller.jsx';
 import MotionSection from '../ui/MotionSection.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 
@@ -143,11 +144,11 @@ export default function ProjectsSection() {
       <div className="grid gap-6">
         <SpotlightProject />
 
-        <div className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <HorizontalScroller className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-4" label="project cards">
           {supportingProjects.map((project, index) => (
             <CompactProject key={project.slug} project={project} index={index} />
           ))}
-        </div>
+        </HorizontalScroller>
 
         <div className="rounded-[1.5rem] border border-white/10 bg-carbon/70 p-5">
           <p className="flex items-center gap-2 text-sm font-semibold uppercase text-electric">
