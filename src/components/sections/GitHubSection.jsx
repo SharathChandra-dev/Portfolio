@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiActivity, FiCode, FiDatabase } from 'react-icons/fi';
 import { githubActivity } from '../../data/portfolio.js';
+import HorizontalScroller from '../ui/HorizontalScroller.jsx';
 import MotionSection from '../ui/MotionSection.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 
@@ -33,7 +34,7 @@ function ContributionGraph() {
         <p className="text-xs text-slate-500">Last 6 months</p>
       </div>
 
-      <div className="max-w-full overflow-x-auto rounded-2xl border border-white/10 bg-carbon/70 p-4">
+      <HorizontalScroller className="contribution-scroll-track max-w-full overflow-x-auto rounded-2xl border border-white/10 bg-carbon/70 p-4" label="contribution graph">
         <div className="min-w-[520px]">
           <div className="mb-2 grid grid-cols-6 pl-10 text-[10px] font-semibold uppercase text-slate-500">
             {monthLabels.map((month) => (
@@ -83,7 +84,7 @@ function ContributionGraph() {
             <span>More</span>
           </div>
         </div>
-      </div>
+      </HorizontalScroller>
     </div>
   );
 }
@@ -131,11 +132,11 @@ export default function GitHubSection() {
       <div className="grid min-w-0 gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <ContributionGraph />
 
-        <div className="mobile-scroll-row min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <HorizontalScroller className="mobile-scroll-row min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3" label="technology cards">
           {githubActivity.technologies.map((tech, index) => (
             <TechnologyCard key={tech.name} tech={tech} index={index} />
           ))}
-        </div>
+        </HorizontalScroller>
       </div>
     </MotionSection>
   );
