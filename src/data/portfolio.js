@@ -7,7 +7,7 @@ export const profile = {
   phone: '+49 155 10323692',
   email: 'sharath.workdev@gmail.com',
   linkedin: 'https://linkedin.com/in/sharath-c1',
-  github: 'https://github.com/',
+  github: 'https://github.com/SharathChandra-dev',
   resume: '/Sharath_Chandra_Resume.pdf',
   resumeDownloadName: 'Sharath_Chandra_Resume.pdf',
   photo: '/profile/sharath-chandra.jpg',
@@ -118,7 +118,7 @@ export const skillGroups = [
   },
   {
     title: 'Languages',
-    skills: ['English', 'German Basics', 'Hindi', 'Kannada'],
+    skills: ['English', 'German', 'Hindi', 'Kannada'],
   },
 ];
 
@@ -128,9 +128,9 @@ export const projects = [
     title: 'IoT Face Recognition Surveillance Robot',
     category: 'Major Project',
     year: '2024',
-    preview: '/project-screenshots/iot-robot/prototype.jpeg',
+    preview: '/project-screenshots/iot-robot/prototype.jpg',
     gallery: [
-      '/project-screenshots/iot-robot/prototype.jpeg',
+      '/project-screenshots/iot-robot/prototype.jpg',
       '/project-screenshots/iot-robot/face-recognition.jpeg',
       '/project-screenshots/iot-robot/telegram-alerts.jpeg',
       '/project-screenshots/iot-robot/block-diagram.png',
