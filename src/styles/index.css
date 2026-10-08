@@ -1309,3 +1309,80 @@ footer {
     animation: none;
   }
 }
+
+.horizontal-scroller {
+  min-width: 0;
+}
+
+.horizontal-scroll-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.horizontal-scroll-controls > span {
+  margin-right: auto;
+  color: #748078;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.horizontal-scroll-controls button {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 1px solid #d4dcd7;
+  border-radius: 50%;
+  background: #fffefa;
+  color: #19324a;
+  box-shadow: 0 4px 12px rgba(25, 50, 74, 0.08);
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease, opacity 160ms ease;
+  cursor: pointer;
+}
+
+.horizontal-scroll-controls button:not(:disabled):last-child {
+  border-color: #19324a;
+  background: #19324a;
+  color: #fffefa;
+}
+
+.horizontal-scroll-controls button:not(:disabled):hover {
+  border-color: #a85f3a;
+  background: #a85f3a;
+  color: #fffefa;
+  transform: translateY(-1px);
+}
+
+.horizontal-scroll-controls button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.horizontal-scroll-controls button:focus-visible,
+.horizontal-scroller > :focus-visible {
+  outline: 3px solid #b8754e;
+  outline-offset: 3px;
+}
+
+.contribution-scroll-track {
+  scrollbar-width: none;
+}
+
+.contribution-scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .horizontal-scroll-controls {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .horizontal-scroll-controls button {
+    transition: none;
+  }
+}
