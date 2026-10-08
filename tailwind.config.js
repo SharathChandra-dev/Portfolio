@@ -7,10 +7,10 @@ export default {
         ink: '#1b211d',
         carbon: '#efeee8',
         graphite: '#e3e3da',
-        electric: '#476b55',
-        pulse: '#9b7955',
+        electric: '#19324a',
+        pulse: '#a85f3a',
         frost: '#f8f7f2',
-        mint: '#83956e',
+        mint: '#28766f',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
