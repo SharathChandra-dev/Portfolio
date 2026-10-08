@@ -43,14 +43,29 @@ export default function HeroSection() {
             <span>{heroTech.join(' · ')}</span>
           </div>
         </div>
-        <div className="hero-profile-card">
-          <img src={profile.photo} alt={profile.fullName} width="88" height="88" />
-          <div>
-            <p className="text-sm font-semibold text-white">{profile.displayName}</p>
-            <p className="mt-1 text-xs leading-5 text-slate-400">React · Full stack · Product minded</p>
+        <aside className="hero-profile-card" aria-label="Professional profile summary">
+          <div className="hero-profile-topline">
+            <span>PROFILE <b>01</b></span>
+            <span className="hero-profile-availability"><i aria-hidden="true" />Open to opportunities</span>
           </div>
-          <span className="hero-profile-status" aria-label="Available for opportunities" />
-        </div>
+          <div className="hero-profile-identity">
+            <img src={profile.photo} alt={profile.fullName} width="80" height="80" />
+            <div>
+              <h2>{profile.displayName}</h2>
+              <p>Full-Stack Software Developer</p>
+            </div>
+          </div>
+          <div className="hero-profile-details">
+            <p className="hero-profile-location"><FiMapPin aria-hidden="true" />{profile.location}</p>
+            <p>M.Sc. Applied Computer Science student</p>
+          </div>
+          <div className="hero-profile-bottom">
+            <div className="hero-profile-experience"><strong>2+</strong><span>years professional<br />experience</span></div>
+            <div className="hero-profile-stack" aria-label="Core technologies">
+              {['React', 'Node.js', 'Java'].map((tech) => <span key={tech}>{tech}</span>)}
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
   );
