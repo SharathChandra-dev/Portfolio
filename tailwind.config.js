@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#05070d',
-        carbon: '#0b1020',
-        graphite: '#151a2d',
-        electric: '#35a7ff',
-        pulse: '#9a7cff',
-        frost: '#edf5ff',
-        mint: '#43e8b5',
+        ink: '#1b211d',
+        carbon: '#efeee8',
+        graphite: '#e3e3da',
+        electric: '#476b55',
+        pulse: '#9b7955',
+        frost: '#f8f7f2',
+        mint: '#83956e',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
