@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaDatabase, FaReact } from 'react-icons/fa';
 import { FiCode, FiCpu, FiLayers, FiTool } from 'react-icons/fi';
 import { skillGroups, certifications } from '../../data/portfolio.js';
+import HorizontalScroller from '../ui/HorizontalScroller.jsx';
 import MotionSection from '../ui/MotionSection.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 
@@ -21,7 +22,7 @@ export default function SkillsSection() {
         Skills are grouped by the way Sharath ships: polished interfaces, dependable APIs, database-backed workflows, and disciplined testing.
       </SectionHeader>
 
-      <div className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <HorizontalScroller className="mobile-scroll-row gap-5 md:grid-cols-2 xl:grid-cols-3" label="skill groups">
         {skillGroups.map((group, index) => {
           const Icon = icons[group.title] ?? FiCode;
 
@@ -54,7 +55,7 @@ export default function SkillsSection() {
             </motion.article>
           );
         })}
-      </div>
+      </HorizontalScroller>
 
       <div className="mt-8 rounded-3xl border border-white/10 bg-gradient-to-r from-white/10 via-electric/10 to-pulse/10 p-6 backdrop-blur-xl">
         <h3 className="font-display text-xl font-semibold text-white">Certifications</h3>
