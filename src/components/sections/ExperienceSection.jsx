@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiBriefcase, FiCheck, FiMapPin, FiZap } from 'react-icons/fi';
 import { experience } from '../../data/portfolio.js';
+import HorizontalScroller from '../ui/HorizontalScroller.jsx';
 import MotionSection from '../ui/MotionSection.jsx';
 import SectionHeader from '../ui/SectionHeader.jsx';
 
@@ -77,7 +78,7 @@ export default function ExperienceSection() {
                   </div>
                 </div>
 
-                <ul className="experience-point-row grid gap-3" aria-label={`${item.role} highlights`}>
+                <HorizontalScroller as="ul" className="experience-point-row grid gap-3" label={`${item.role} highlights`}>
                   {item.points.map((point, pointIndex) => (
                     <motion.li
                       key={point}
@@ -93,7 +94,7 @@ export default function ExperienceSection() {
                       <span className="experience-point-copy min-w-0 break-words">{point}</span>
                     </motion.li>
                   ))}
-                </ul>
+                </HorizontalScroller>
               </motion.article>
             </motion.div>
           ))}
