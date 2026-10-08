@@ -39,13 +39,12 @@ export default function AboutSection() {
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ type: 'spring', stiffness: 240, damping: 20 }}
           >
-            <div className="grid gap-6 sm:grid-cols-[0.8fr_1.2fr] sm:items-center">
-              <div className="relative mx-auto aspect-[4/5] w-full max-w-64 overflow-hidden rounded-[2rem] border border-white/15 bg-gradient-to-br from-electric/25 via-white/10 to-pulse/25 p-4">
-                <div className="absolute inset-4 rounded-[1.5rem] border border-white/10 bg-ink/40" />
+            <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-start">
+              <div className="relative mx-auto size-20 overflow-hidden rounded-full border border-white/15 sm:mx-0">
                 <img
                   src={profile.photo}
                   alt={profile.fullName}
-                  className="relative h-full w-full rounded-[1.4rem] object-cover object-[50%_32%] shadow-glow"
+                  className="h-full w-full object-cover object-center"
                   loading="lazy"
                   decoding="async"
                 />
