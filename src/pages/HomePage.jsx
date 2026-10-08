@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import HeroSection from '../components/sections/HeroSection.jsx';
 
 const AboutSection = lazy(() => import('../components/sections/AboutSection.jsx'));
+const RecruiterProofSection = lazy(() => import('../components/sections/RecruiterProofSection.jsx'));
 const ExperienceSection = lazy(() => import('../components/sections/ExperienceSection.jsx'));
 const SkillsSection = lazy(() => import('../components/sections/SkillsSection.jsx'));
 const ProjectsSection = lazy(() => import('../components/sections/ProjectsSection.jsx'));
@@ -25,6 +26,9 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <DeferredSection>
+        <RecruiterProofSection />
+      </DeferredSection>
       <DeferredSection>
         <AboutSection />
       </DeferredSection>
